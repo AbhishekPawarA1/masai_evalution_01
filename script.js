@@ -10,7 +10,7 @@ let add = document.getElementById("add");
 add.addEventListener("click", handleadd);
 
 function handleadd() {
-  container.innerHTML = `
+  container.innerHTML += `
           
            <div id="child">
                 <h3 id="head">Task</h3>
