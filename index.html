@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <select id="filter">
+        <option value="Default">Default</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+    <h2 style="text-align: center;">Task Management</h2>
+    <div id="input-div">
+    <input type="text" placeholder="title" id="input-title" value="">
+    <input type="text" placeholder="description" id="input-description" value="" >
+    <select >
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <button id="add">Add task</button>
+    </div>
+    <div id="root">
+        
+    </div>
+</body>
+</html>
+
+<script >
+    let container=document.getElementById("root")
+    let title=document.getElementById("input-title")
+    let description=document.getElementById("input-description")
+    description.addEventListener("change",handledescription);
+    function handledescription(){
+        console.log(description.value)
+    }
+
+    let add=document.getElementById("add")
+    add.addEventListener("click" ,handleadd);
+
+    function handleadd(){
+        container.innerHTML=`
+          
+           <div id="child">
+                <h3 id="head">Task</h3>
+                <p>Title:<b>${title.value}</b></h1>
+                    <p>Description:<b>${description.value}</b></h1>
+            </div>
+        `;
+        
+    }
+
+
+
+    // filter approach
+
+    // data.sort((a,b)=>{
+    //     return a-b
+    // })
+
+    
+    
+
+</script>
