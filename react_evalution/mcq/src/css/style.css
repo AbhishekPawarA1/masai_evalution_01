@@ -1,0 +1,20 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+    
+}
+button {
+    width: 100%;
+    margin-top: 5px;
+}
+.que {
+    border: 1px solid white;
+}
+.opt {
+    border: 1px solid rgb(165, 160, 150);
+    cursor: pointer;
+   
+}
